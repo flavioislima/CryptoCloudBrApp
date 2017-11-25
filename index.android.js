@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-//import 'es6-symbol';
 import { AppRegistry } from 'react-native';
 import { Scene, Router, Stack } from 'react-native-router-flux';
 import MainScreen from './src/components/MainScreen';
@@ -8,7 +7,7 @@ import Servicos from './src/components/Servicos/Servicos';
 import QuemSomos from './src/components/QuemSomos/QuemSomos';
 import Cotacoes from './src/components/Cotacoes/Cotacoes';
 
-class Home extends Component<{}> {
+class CryptoCloudBR extends Component<{}> {
   render() {
       return (
         <Router>
@@ -39,4 +38,4 @@ class Home extends Component<{}> {
   }
 }
 
-AppRegistry.registerComponent('CCBR2', () => Home);
+AppRegistry.registerComponent('CryptoCloudBR', () => CryptoCloudBR);
