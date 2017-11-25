@@ -3,10 +3,10 @@ import React, { Component } from 'react';
 import { AppRegistry } from 'react-native';
 import { Scene, Router, Stack } from 'react-native-router-flux';
 import MainScreen from './src/components/MainScreen';
-import Contatos from './src/components/Contatos';
-import Servicos from './src/components/Servicos';
-import QuemSomos from './src/components/QuemSomos';
-import Cotacoes from './src/components/Cotacoes';
+import Contatos from './src/components/Contatos/Contatos';
+import Servicos from './src/components/Servicos/Servicos';
+import QuemSomos from './src/components/QuemSomos/QuemSomos';
+import Cotacoes from './src/components/Cotacoes/Cotacoes';
 
 class Home extends Component<{}> {
   render() {

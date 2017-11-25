@@ -9,10 +9,10 @@ import {
 import { Actions } from 'react-native-router-flux';
 
 const logo = require('../imgs/logo.png');
-const contato = require('../imgs/contact.png');
-const cotacoes = require('../imgs/cotacoes.png');
-const services = require('../imgs/services.png');
-const about = require('../imgs/about.png');
+const contato = require('./Contatos/contact.png');
+const cotacoes = require('./Cotacoes/cotacoes.png');
+const services = require('./Servicos/services.png');
+const about = require('./QuemSomos/about.png');
 
 
 export default class MainScreen extends Component<{}> {

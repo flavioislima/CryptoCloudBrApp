@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import FormContato from './FormContato';
 
-const contato = require('../imgs/contact.png');
+const contato = require('./contact.png');
 
 export default class Contatos extends Component<{}> {
   render() {

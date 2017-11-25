@@ -6,13 +6,12 @@ import {
   Image
 } from 'react-native';
 
-const flavio = require('../imgs/membros/flavio.jpg');
-const alan = require('../imgs/membros/alan.jpg');
-const terra = require('../imgs/membros/terra.jpg');
-const vitor = require('../imgs/membros/vitor.jpg');
-const cereja = require('../imgs/membros/cereja.jpg');
-const toledo = require('../imgs/membros/toledo.jpg');
-
+const flavio = require('./membros/flavio.jpg');
+const alan = require('./membros/alan.jpg');
+const terra = require('./membros/terra.jpg');
+const vitor = require('./membros/vitor.jpg');
+const cereja = require('./membros/cereja.jpg');
+const toledo = require('./membros/toledo.jpg');
 
 export default class QuemSomos extends Component<{}> {
   render() {
