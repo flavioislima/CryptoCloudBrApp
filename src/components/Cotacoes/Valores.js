@@ -2,17 +2,17 @@ import React, { Component } from 'react';
 import {
   Text,
   View,
-  ViewScroll,
+  ScrollView,
   StyleSheet,
   Image
 } from 'react-native';
 
-const icone = require('./cotacoes.png');
+const icone = require('./BTC.png');
 
 export default class Valores extends Component<{}> {
   render() {
     return (
-      <ViewScroll style={styles.MainView}>
+      <ScrollView style={styles.MainView}>
 
         <View style={styles.MoedasView}>
           <View style={styles.NomeView}>
@@ -47,14 +47,14 @@ export default class Valores extends Component<{}> {
           </View>
         </View>
 
-      </ViewScroll>
+      </ScrollView>
     );
   }
 }
 
 const styles = StyleSheet.create({
     MainView: {
-      flex: 1,
+      //flex: 1,
       backgroundColor: 'white'
     },
     MoedasView: {
@@ -66,19 +66,28 @@ const styles = StyleSheet.create({
     },
     NomeView: {
       width: 80,
+      borderWidth: 0.5,
+      borderColor: 'black',
+      alignItems: 'center',
+      justifyContent: 'center'
     },
     InfoView: {
-      flexDirection: 'row'
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'center'
     },
     Nome: {
-      fontSize: 14,
+      fontSize: 13,
       fontWeight: 'bold',
       color: 'white',
-      textAlign: 'center'
+      textAlign: 'left',
+      marginVertical: 2.5
     },
     Porcentagem: {
       fontSize: 12,
-      color: 'green'
+      color: 'green',
+      marginRight: 100,
+      marginLeft: 15,
     },
     Valor: {
       fontSize: 18,
@@ -86,8 +95,9 @@ const styles = StyleSheet.create({
       color: 'white'
     },
     Icone: {
-      width: 50,
-      height: 50
+      width: 40,
+      height: 40,
+      marginVertical: 2.5
     }
 
 });

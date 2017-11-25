@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
       borderColor: 'gray'
     },
     LogoIcon: {
-      width: 220,
+      width: 280,
       height: 100,
       //marginBottom: 5,
     },

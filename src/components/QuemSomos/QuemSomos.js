@@ -18,8 +18,9 @@ export default class QuemSomos extends Component<{}> {
     return (
       <View style={styles.MainView}>
         <View style={styles.AboutView}>
-          <Text style={styles.TextTitle}>Sobre a CryptoCloudBrasil:</Text>
-          <Text style={styles.TextAbout}>Corretora, Controladora de Fundos e Mineradora de CryptoMoedas</Text>
+          <Text style={styles.TextAbout}>
+          Corretora, Controladora de Fundos e Mineradora de CryptoMoedas.
+          </Text>
         </View>
 
 
@@ -71,8 +72,6 @@ export default class QuemSomos extends Component<{}> {
                 <Text style={styles.Descricao}>Marketing e Vendas</Text>
               </View>
             </View>
-
-
           </View>
         </View>
 

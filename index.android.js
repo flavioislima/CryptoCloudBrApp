@@ -26,7 +26,7 @@ class CryptoCloudBR extends Component<{}> {
             />
             <Scene
             key='cotacoes' component={Cotacoes} title="Cotações"
-            titleStyle={{ paddingLeft: 66 }}
+            titleStyle={{ paddingLeft: 56 }}
             />
             <Scene
             key='quemsomos' component={QuemSomos} title="Quem Somos"
