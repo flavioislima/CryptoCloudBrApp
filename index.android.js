@@ -13,16 +13,26 @@ class Home extends Component<{}> {
       return (
         <Router>
           <Stack key="root">
-            <Scene key='main' component={MainScreen} title="CryptoCloudBrasil"
-            titleStyle={{alignSelf: 'center'}} />
-            <Scene key='contato' component={Contatos} title="Nossos Contatos"
-            titleStyle={{paddingLeft: 45}} />
-            <Scene key='servicos' component={Servicos} title="Nossos Serviços"
-            titleStyle={{paddingLeft: 45}} />
-            <Scene key='cotacoes' component={Cotacoes} title="Cotações"
-            titleStyle={{paddingLeft: 66}} />
-            <Scene key='quemsomos' component={QuemSomos} title="Quem Somos"
-            titleStyle={{paddingLeft: 58}} />
+            <Scene
+            key='main' component={MainScreen} title="CryptoCloudBrasil"
+            titleStyle={{ alignSelf: 'center' }}
+            />
+            <Scene
+            key='contato' component={Contatos}
+            title="Nossos Contatos" titleStyle={{ paddingLeft: 45 }}
+            />
+            <Scene
+            key='servicos' component={Servicos} title="Nossos Serviços"
+            titleStyle={{ paddingLeft: 45 }}
+            />
+            <Scene
+            key='cotacoes' component={Cotacoes} title="Cotações"
+            titleStyle={{ paddingLeft: 66 }}
+            />
+            <Scene
+            key='quemsomos' component={QuemSomos} title="Quem Somos"
+            titleStyle={{ paddingLeft: 58 }}
+            />
           </Stack>
         </Router>
       );
