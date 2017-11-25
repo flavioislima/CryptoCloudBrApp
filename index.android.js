@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { AppRegistry } from 'react-native';
 import { Scene, Router, Stack } from 'react-native-router-flux';
-import MainScreen from './src/components/MainScreen';
+import MainScreen from './src/components/MainScreen/MainScreen';
 import Contatos from './src/components/Contatos/Contatos';
 import Servicos from './src/components/Servicos/Servicos';
 import QuemSomos from './src/components/QuemSomos/QuemSomos';
