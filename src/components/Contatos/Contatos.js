@@ -8,23 +8,20 @@ import {
 } from 'react-native';
 import FormContato from './FormContato';
 
-const contato = require('./contact.png');
+//const contato = require('./contato.png');
 
 export default class Contatos extends Component<{}> {
   render() {
     return (
       <View style={styles.MainView}>
-          <KeyboardAvoidingView style={styles.TitleView}>
-            <Image source={contato} style={{ width: 100, height: 100 }} />
-            <Text style={styles.TextTitle}>Nossos Contatos</Text>
-          </KeyboardAvoidingView>
-          <KeyboardAvoidingView style={styles.contatos}>
+          <View style={styles.ListaView}>
             <Text style={styles.Contatos}>Central de Atendimento: 0800 000 666</Text>
             <Text style={styles.Contatos}>E-mail: contato@CryptoCloudBrasil.com.br</Text>
             <Text style={styles.Contatos}>WebSite: CryptoCloudBrasil.com.br</Text>
             <Text />
-          </KeyboardAvoidingView>
-          <FormContato />
+            <Text>Clique Aqui para entrar em contato agora mesmo!</Text>
+          </View>
+
           <View style={styles.BottomView}>
             <Text style={styles.BottomText}>CryptoCloudBrasil -
             Todos os Direitos Reservados</Text>
@@ -40,16 +37,20 @@ const styles = StyleSheet.create({
       backgroundColor: 'white'
     },
     TitleView: {
-      flex: 3,
-      flexDirection: 'row',
+      flex: 1,
       alignItems: 'center',
       justifyContent: 'center'
     },
+    ListaView: {
+      flex: 7,
+      // alignItems: 'center',
+      // justifyContent: 'center'
+    },
     BottomView: {
-      flex: 1,
+      flex: 0.5,
       alignItems: 'center',
       justifyContent: 'center',
-      backgroundColor: 'white',
+      backgroundColor: '#005196',
       borderWidth: 0.25,
       borderColor: 'gray'
     },
@@ -60,8 +61,12 @@ const styles = StyleSheet.create({
     },
     BottomText: {
       fontSize: 12,
+      color: 'white',
       textAlign: 'center',
     },
-
+    Contatos: {
+        fontSize: 16,
+        fontWeight: 'bold'
+    }
 
   });

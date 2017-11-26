@@ -14,23 +14,27 @@ class CryptoCloudBR extends Component<{}> {
           <Stack key="root">
             <Scene
             key='main' component={MainScreen} title="CryptoCloudBrasil"
-            titleStyle={{ alignSelf: 'center' }}
+            titleStyle={{ alignSelf: 'center', color: 'white' }}
+            headerStyle={{ backgroundColor: 'orange' }}
             />
             <Scene
-            key='contato' component={Contatos}
-            title="Nossos Contatos" titleStyle={{ paddingLeft: 45 }}
+            key='contato' component={Contatos} title="Nossos Contatos"
+            titleStyle={{ paddingLeft: 45, color: 'white' }}
+            headerStyle={{ backgroundColor: '#005196' }}
             />
             <Scene
             key='servicos' component={Servicos} title="Nossos Serviços"
-            titleStyle={{ paddingLeft: 45 }}
+            titleStyle={{ paddingLeft: 45, color: 'white' }} headerStyle={{ backgroundColor: '#ffa500' }}
             />
             <Scene
             key='cotacoes' component={Cotacoes} title="Cotações"
-            titleStyle={{ paddingLeft: 56 }}
+            titleStyle={{ marginHorizontal: 10, color: 'white' }}
+            headerStyle={{ backgroundColor: '#008f00' }}
             />
             <Scene
             key='quemsomos' component={QuemSomos} title="Quem Somos"
-            titleStyle={{ paddingLeft: 58 }}
+            titleStyle={{ paddingLeft: 58, color: 'white' }}
+            headerStyle={{ backgroundColor: 'orange' }}
             />
           </Stack>
         </Router>

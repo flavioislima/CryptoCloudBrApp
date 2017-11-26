@@ -3,7 +3,6 @@ import {
   Text,
   View,
   StyleSheet,
-  KeyboardAvoidingView,
   TextInput,
   Alert,
   TouchableOpacity
@@ -22,7 +21,7 @@ export default class FormContato extends Component<{}> {
     return (
       <View style={styles.FormView}>
         <Text>Formulário de contato:</Text>
-        <KeyboardAvoidingView>
+        <View>
           <Text>Nome: </Text>
           <TextInput
           style={{ color: 'lightgray', width: 320 }}
@@ -47,9 +46,9 @@ export default class FormContato extends Component<{}> {
           value={this.state.motivo}
           multiline
           />
-        </KeyboardAvoidingView>
+        </View>
         <TouchableOpacity onPress={() => Alert.alert('Formulário Enviado!')} >
-          <Text style={styles.Button}>
+          <Text style={styles.button}>
           Enviar </Text>
         </TouchableOpacity>
       </View>
@@ -65,7 +64,7 @@ const styles = StyleSheet.create({
       borderWidth: 0.25,
       borderColor: 'gray',
     },
-    Button: {
+    button: {
       backgroundColor: 'orange',
       textAlign: 'center',
       width: 100,

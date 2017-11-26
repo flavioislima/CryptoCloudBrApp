@@ -9,10 +9,10 @@ import {
 import { Actions } from 'react-native-router-flux';
 
 const logo = require('./logo.png');
-const contato = require('../Contatos/contact.png');
+const contato = require('../Contatos/contato.png');
 const cotacoes = require('../Cotacoes/cotacoes.png');
-const services = require('../Servicos/services.png');
-const about = require('../QuemSomos/about.png');
+const services = require('../Servicos/servicos.png');
+const about = require('../QuemSomos/quemsomos.png');
 
 
 export default class MainScreen extends Component<{}> {
@@ -22,22 +22,23 @@ export default class MainScreen extends Component<{}> {
           <View style={styles.LogoView}>
             <Image source={logo} style={styles.LogoIcon} />
           </View>
-          <View style={styles.IconsView}>
-            <TouchableOpacity onPress={() => Actions.contato()}>
-              <Image source={contato} style={styles.Icons} />
-              <Text style={styles.TextIcons}>Contato</Text>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => Actions.cotacoes()}>
-              <Image source={cotacoes} style={styles.Icons} />
-              <Text style={styles.TextIcons}>Cotações</Text>
-            </TouchableOpacity>
-          </View>
 
           <View style={styles.IconsView}>
             <TouchableOpacity onPress={() => Actions.servicos()}>
               <Image source={services} style={styles.Icons} />
               <Text style={styles.TextIcons}>Serviços</Text>
             </TouchableOpacity>
+              <TouchableOpacity onPress={() => Actions.cotacoes()}>
+                <Image source={cotacoes} style={styles.Icons} />
+                <Text style={styles.TextIcons}>Cotações</Text>
+              </TouchableOpacity>
+            </View>
+
+          <View style={styles.IconsView}>
+          <TouchableOpacity onPress={() => Actions.contato()}>
+            <Image source={contato} style={styles.Icons} />
+            <Text style={styles.TextIcons}>Contato</Text>
+          </TouchableOpacity>
             <TouchableOpacity onPress={() => Actions.quemsomos()}>
               <Image source={about} style={styles.Icons} />
               <Text style={styles.TextIcons}>Quem Somos</Text>
@@ -71,15 +72,15 @@ const styles = StyleSheet.create({
       backgroundColor: 'white',
     },
     BottomView: {
-      flex: 1,
+      flex: 0.5,
       alignItems: 'center',
       justifyContent: 'center',
-      backgroundColor: 'white',
+      backgroundColor: 'orange',
       borderWidth: 0.25,
       borderColor: 'gray'
     },
     LogoIcon: {
-      width: 280,
+      width: 300,
       height: 100,
       //marginBottom: 5,
     },
@@ -88,16 +89,17 @@ const styles = StyleSheet.create({
       height: 100,
       marginRight: 25,
       marginLeft: 25,
-      marginBottom: 10
+      marginBottom: 10,
     },
     TextIcons: {
-      fontSize: 13,
-      color: 'orange',
+      fontSize: 20,
+      color: '#3a4347',
       fontWeight: 'bold',
       alignSelf: 'center'
     },
     BottomText: {
       fontSize: 12,
       textAlign: 'center',
+      color: 'white'
     },
   });

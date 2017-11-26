@@ -107,10 +107,10 @@ const styles = StyleSheet.create({
       backgroundColor: 'white',
     },
     BottomView: {
-      flex: 1,
+      flex: 0.5,
       alignItems: 'center',
       justifyContent: 'center',
-      backgroundColor: 'white',
+      backgroundColor: 'orange',
       borderWidth: 0.25,
       borderColor: 'gray'
     },
@@ -133,6 +133,7 @@ const styles = StyleSheet.create({
     BottomText: {
       fontSize: 12,
       textAlign: 'center',
+      color: 'white'
     },
     Imagem: {
       width: 50,
