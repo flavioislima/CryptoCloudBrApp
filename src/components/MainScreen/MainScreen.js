@@ -7,6 +7,7 @@ import {
   StyleSheet
 } from 'react-native';
 import { Actions } from 'react-native-router-flux';
+import Rodape from '../Rodape/rodape';
 
 const logo = require('./logo.png');
 const contato = require('../Contatos/contato.png');
@@ -44,10 +45,7 @@ export default class MainScreen extends Component<{}> {
               <Text style={styles.TextIcons}>Quem Somos</Text>
             </TouchableOpacity>
           </View>
-          <View style={styles.BottomView}>
-            <Text style={styles.BottomText}>CryptoCloudBrasil -
-                Todos os Direitos Reservados</Text>
-          </View>
+          <Rodape />
         </View>
     );
   }

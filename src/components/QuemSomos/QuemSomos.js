@@ -5,6 +5,7 @@ import {
   StyleSheet,
   Image
 } from 'react-native';
+import Rodape from '../Rodape/rodape';
 
 const flavio = require('./membros/flavio.jpg');
 const alan = require('./membros/alan.jpg');
@@ -75,10 +76,7 @@ export default class QuemSomos extends Component<{}> {
           </View>
         </View>
 
-        <View style={styles.BottomView}>
-          <Text style={styles.BottomText}>CryptoCloudBrasil -
-              Todos os Direitos Reservados</Text>
-        </View>
+        <Rodape />
 
       </View>
     );

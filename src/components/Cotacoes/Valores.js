@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {
   Text,
   View,
-  ScrollView,
   StyleSheet,
   Image
 } from 'react-native';
@@ -12,42 +11,22 @@ const icone = require('./BTC.png');
 export default class Valores extends Component<{}> {
   render() {
     return (
-      <ScrollView style={styles.MainView}>
+      <View style={styles.MainView}>
 
         <View style={styles.MoedasView}>
           <View style={styles.NomeView}>
-            <Text style={styles.Nome}>Bitcoin</Text>
+            <Text style={styles.Nome}>{this.props.item.name}</Text>
             <Image style={styles.Icone} source={icone} />
           </View>
           <View style={styles.InfoView}>
-            <Text style={styles.Porcentagem}>+10%</Text>
-            <Text style={styles.Valor}>R$30000</Text>
+            <Text style={styles.Porcentagem}>{this.props.item.percent_change_24h}</Text>
+            <Text style={styles.Valor}>$USD{this.props.item.price_usd}</Text>
+          </View>
+          <View style={{ alignItems: 'flex-end' }}>
+            <Text style={styles.ValorBTC}>{this.props.item.price_btc}btc</Text>
           </View>
         </View>
-
-        <View style={styles.MoedasView}>
-          <View style={styles.NomeView}>
-            <Text style={styles.Nome}>Btc Cash</Text>
-            <Image style={styles.Icone} source={icone} />
-          </View>
-          <View style={styles.InfoView}>
-            <Text style={styles.Porcentagem}>+12%</Text>
-            <Text style={styles.Valor}>R$6000</Text>
-          </View>
-        </View>
-
-        <View style={styles.MoedasView}>
-          <View style={styles.NomeView}>
-            <Text style={styles.Nome}>Ethereum</Text>
-            <Image style={styles.Icone} source={icone} />
-          </View>
-          <View style={styles.InfoView}>
-            <Text style={styles.Porcentagem}>+15%</Text>
-            <Text style={styles.Valor}>R$1800</Text>
-          </View>
-        </View>
-
-      </ScrollView>
+      </View>
     );
   }
 }
@@ -93,6 +72,10 @@ const styles = StyleSheet.create({
       fontSize: 18,
       fontWeight: 'bold',
       color: 'white'
+    },
+    ValorBTC: {
+      fontSize: 13,
+      color: 'white',
     },
     Icone: {
       width: 40,

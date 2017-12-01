@@ -1,32 +1,29 @@
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
-import axios from 'axios'
+import { Text, View, ScrollView } from 'react-native';
+import axios from 'axios';
 import Valores from './Valores';
+import Rodape from '../Rodape/rodape';
 
 export default class Cotacoes extends Component<{}> {
-  componentDidMount() {
-    axios.get();
+  constructor(props) {
+    super(props);
+    this.state = { listaMoedas: [] };
+  }
+
+  componentWillMount() {
+    axios.get('https://api.coinmarketcap.com/v1/ticker/?limit=15')
+    .then(response => { this.setState({ listaMoedas: response.data }); })
+    .catch(() => { console.log('Erro ao recuperar os dados'); });
   }
 
   render() {
     return (
       <View style={{ flex: 1 }}>
-        <View style={{ flex: 8 }}>
+        <ScrollView style={{ flex: 8 }}>
           <Text style={{ textAlign: 'center', fontSize: 20 }}>Cotações das Principais Moedas</Text>
-          <Valores />
-        </View>
-        <View
-        style={{
-          flex: 0.5,
-          alignItems: 'center',
-          justifyContent: 'center',
-          backgroundColor: '#008f00',
-          borderWidth: 0.25,
-          borderColor: 'gray' }}
-        >
-          <Text style={{ color: 'white', fontSize: 12, textAlign: 'center' }}>CryptoCloudBrasil -
-              Todos os Direitos Reservados</Text>
-        </View>
+          { this.state.listaItens.map(item => (<Valores key={item.symbol} item={item} />))}
+        </ScrollView>
+        <Rodape />
       </View>
     );
   }

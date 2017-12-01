@@ -7,8 +7,7 @@ import {
   KeyboardAvoidingView
 } from 'react-native';
 import FormContato from './FormContato';
-
-//const contato = require('./contato.png');
+import Rodape from '../Rodape/rodape';
 
 export default class Contatos extends Component<{}> {
   render() {
@@ -21,11 +20,7 @@ export default class Contatos extends Component<{}> {
             <Text />
             <Text>Clique Aqui para entrar em contato agora mesmo!</Text>
           </View>
-
-          <View style={styles.BottomView}>
-            <Text style={styles.BottomText}>CryptoCloudBrasil -
-            Todos os Direitos Reservados</Text>
-          </View>
+          <Rodape />
       </View>
     );
   }
