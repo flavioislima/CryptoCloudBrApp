@@ -26,12 +26,12 @@ class CryptoCloudBR extends Component<{}> {
             key='servicos' component={Servicos} title="Nossos Serviços"
             titleStyle={{ paddingLeft: 45, color: 'white' }}
             headerStyle={{ backgroundColor: '#ffa500' }}
+            onBackButton={MainScreen}
             />
             <Scene
             key='cotacoes' component={Cotacoes} title="Cotações"
             titleStyle={{ marginHorizontal: 10, color: 'white' }}
             headerStyle={{ backgroundColor: '#008f00' }}
-            initial
             />
             <Scene
             key='quemsomos' component={QuemSomos} title="Quem Somos"

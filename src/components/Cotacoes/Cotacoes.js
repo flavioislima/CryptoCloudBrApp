@@ -11,7 +11,7 @@ export default class Cotacoes extends Component<{}> {
   }
 
   componentWillMount() {
-    axios.get('https://api.coinmarketcap.com/v1/ticker/?limit=15')
+    axios.get('https://api.coinmarketcap.com/v1/ticker/?convert=BRL&limit=15')
     .then(response => { this.setState({ listaMoedas: response.data }); })
     .catch(() => { console.log('Erro ao recuperar os dados'); });
   }

@@ -10,21 +10,29 @@ const icone = require('./BTC.png');
 
 export default class Valores extends Component<{}> {
   render() {
+    const Nome = this.props.item.name;
+    const BTC = this.props.item.price_btc;
+    const BRL = this.props.item.price_brl;
+    const Reais = parseFloat(BRL).toFixed(2);
+    const Porcentagem1h = this.props.item.percent_change_1h;
+    const Porcentagem24h = this.props.item.percent_change_24h;
+    const Porcentagem7d = this.props.item.percent_change_7d;
+
     return (
       <View style={styles.MainView}>
 
         <View style={styles.MoedasView}>
           <View style={styles.NomeView}>
-            <Text style={styles.Nome}>{this.props.item.name}</Text>
+            <Text style={styles.Nome}>{Nome}</Text>
             <Image style={styles.Icone} source={icone} />
           </View>
-          <View style={{ justifyContent: 'center' }}>
+          <View style={{ justifyContent: 'center', flexDirection: 'row' }}>
             <View style={styles.InfoView}>
-              <Text style={styles.Porcentagem}>{this.props.item.percent_change_24h}</Text>
-              <Text style={styles.Valor}>$USD {this.props.item.price_usd}</Text>
+              <Text style={styles.PorcentagemPos}>{Porcentagem24h}</Text>
             </View>
-            <View style={{ alignItems: 'flex-end' }}>
-                <Text style={styles.ValorBTC}>{this.props.item.price_btc}btc</Text>
+            <View style={{ alignItems: 'flex-end', justifyContent: 'center' }}>
+                <Text style={styles.Valor}>R$ {Reais}</Text>
+                <Text style={styles.ValorBTC}>{BTC} btc</Text>
             </View>
           </View>
         </View>
@@ -53,7 +61,7 @@ const styles = StyleSheet.create({
       justifyContent: 'center'
     },
     InfoView: {
-      flexDirection: 'row',
+      //flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'center'
     },
@@ -61,23 +69,31 @@ const styles = StyleSheet.create({
       fontSize: 13,
       fontWeight: 'bold',
       color: 'white',
-      textAlign: 'left',
+      textAlign: 'center',
       marginVertical: 2.5
     },
-    Porcentagem: {
+    PorcentagemPos: {
       fontSize: 12,
-      color: 'green',
+      color: 'yellow',
+      marginRight: 100,
+      marginLeft: 15,
+    },
+    PorcentagemNeg: {
+      fontSize: 12,
+      color: 'red',
       marginRight: 100,
       marginLeft: 15,
     },
     Valor: {
       fontSize: 18,
       fontWeight: 'bold',
-      color: 'white'
+      color: 'white',
+      marginRight: 10
     },
     ValorBTC: {
       fontSize: 13,
       color: 'white',
+      paddingHorizontal: 10
     },
     Icone: {
       width: 40,
