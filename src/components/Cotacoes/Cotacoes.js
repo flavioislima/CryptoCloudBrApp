@@ -21,7 +21,7 @@ export default class Cotacoes extends Component<{}> {
       <View style={{ flex: 1 }}>
         <ScrollView style={{ flex: 8 }}>
           <Text style={{ textAlign: 'center', fontSize: 20 }}>Cotações das Principais Moedas</Text>
-          { this.state.listaItens.map(item => (<Valores key={item.symbol} item={item} />))}
+          { this.state.listaMoedas.map(item => (<Valores key={item.symbol} item={item} />))}
         </ScrollView>
         <Rodape />
       </View>

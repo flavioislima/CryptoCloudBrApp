@@ -18,12 +18,14 @@ export default class Valores extends Component<{}> {
             <Text style={styles.Nome}>{this.props.item.name}</Text>
             <Image style={styles.Icone} source={icone} />
           </View>
-          <View style={styles.InfoView}>
-            <Text style={styles.Porcentagem}>{this.props.item.percent_change_24h}</Text>
-            <Text style={styles.Valor}>$USD{this.props.item.price_usd}</Text>
-          </View>
-          <View style={{ alignItems: 'flex-end' }}>
-            <Text style={styles.ValorBTC}>{this.props.item.price_btc}btc</Text>
+          <View style={{ justifyContent: 'center' }}>
+            <View style={styles.InfoView}>
+              <Text style={styles.Porcentagem}>{this.props.item.percent_change_24h}</Text>
+              <Text style={styles.Valor}>$USD {this.props.item.price_usd}</Text>
+            </View>
+            <View style={{ alignItems: 'flex-end' }}>
+                <Text style={styles.ValorBTC}>{this.props.item.price_btc}btc</Text>
+            </View>
           </View>
         </View>
       </View>
