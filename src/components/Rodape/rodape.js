@@ -11,7 +11,7 @@ export default class Rodape extends Component<{}> {
         backgroundColor: 'orange',
         // borderWidth: 0.25,
         // borderColor: 'gray',
-        height: 30 }}
+        height: 35 }}
       >
         <Text style={{ color: 'white', fontSize: 11, textAlign: 'center' }}>
         CryptoCloudBrasil©</Text>

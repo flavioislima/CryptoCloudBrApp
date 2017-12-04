@@ -19,14 +19,13 @@ export default class Cotacoes extends Component<{}> {
     this.state = { listaMoedas: [], refreshing: false, };
   }
 
-
   componentWillMount() {
     axios.get('https://api.coinmarketcap.com/v1/ticker/?convert=BRL&limit=20')
     .then(response => { this.setState({ listaMoedas: response.data }); })
     .catch(() => { console.log('Erro ao recuperar os dados'); });
   }
 
-  _onRefresh() {
+  onRefresh() {
     this.setState({ refreshing: true });
     axios.get('https://api.coinmarketcap.com/v1/ticker/?convert=BRL&limit=20')
     .then(response => { this.setState({ listaMoedas: response.data, refreshing: false }); })
@@ -41,7 +40,7 @@ export default class Cotacoes extends Component<{}> {
            refreshControl={
                             <RefreshControl
                               refreshing={this.state.refreshing}
-                              onRefresh={this._onRefresh.bind(this)}
+                              onRefresh={this.onRefresh.bind(this)}
                             />
                             }
         >
