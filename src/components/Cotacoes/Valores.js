@@ -5,19 +5,17 @@ import {
   StyleSheet,
   Image
 } from 'react-native';
-// import Icone from './Icones';
-
-//const icone = require('./BTC.png');
+import numeral from 'numeral';
 
 export default class Valores extends Component<{}> {
   render() {
     const Nome = this.props.item.name;
     const BTC = this.props.item.price_btc;
     const BRL = this.props.item.price_brl;
-    const Reais = (parseFloat(BRL).toFixed(2)).replace('.', ',');
-    const Porcentagem1h = this.props.item.percent_change_1h;
+    const Reais = numeral(parseFloat(BRL)).format('0,0.00');
+    // const Porcentagem1h = this.props.item.percent_change_1h;
     const Porcentagem24h = this.props.item.percent_change_24h;
-    const Porcentagem7d = this.props.item.percent_change_7d;
+    // const Porcentagem7d = this.props.item.percent_change_7d;
     const symbol = this.props.item.symbol;
 
     const btc = require('./icones/btc.png');
@@ -95,13 +93,22 @@ export default class Valores extends Component<{}> {
       case 'EOS':
         Icone = eos;
         break;
+      case 'ZEC':
+        Icone = zec;
+        break;
+      case 'QTUM':
+        Icone = qtum;
+        break;
+      case 'BCC':
+        Icone = bcc;
+        break;
       default:
         Icone = btc;
         break;
       }
 
 const Porcentagem = () => {
-  if (Porcentagem24h > 0) {
+  if (Porcentagem24h >= 0) {
       return (<Text style={styles.PorcentagemPos}>+{Porcentagem24h}%</Text>);
   } return (<Text style={styles.PorcentagemNeg}>{Porcentagem24h}%</Text>);
 };
@@ -136,12 +143,12 @@ const styles = StyleSheet.create({
     },
     MoedasView: {
       flexDirection: 'row',
-      marginHorizontal: 5,
-      marginVertical: 2.5,
+      //marginHorizontal: 5,
+      //marginVertical: 1.5,
       height: 70,
       backgroundColor: 'white',
-      borderBottomWidth: 0.35,
-      borderColor: 'black'
+      borderWidth: 0.25,
+      borderColor: 'gray'
     },
     NomeView: {
       width: 100,
@@ -200,3 +207,25 @@ const styles = StyleSheet.create({
     }
 
 });
+
+
+// load a locale
+numeral.register('locale', 'pt-br', {
+        delimiters: {
+            thousands: '.',
+            decimal: ','
+        },
+        abbreviations: {
+            thousand: 'mil',
+            million: 'milhões',
+            billion: 'b',
+            trillion: 't'
+        },
+        ordinal: function (number) {
+            return 'º';
+        },
+        currency: {
+symbol: 'R$'
+    }
+});
+    numeral.locale('pt-br');

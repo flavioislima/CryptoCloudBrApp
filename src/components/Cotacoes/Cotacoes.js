@@ -12,15 +12,14 @@ export default class Cotacoes extends Component<{}> {
 
 
   componentWillMount() {
-    axios.get('https://api.coinmarketcap.com/v1/ticker/?convert=BRL&limit=15')
+    axios.get('https://api.coinmarketcap.com/v1/ticker/?convert=BRL&limit=20')
     .then(response => { this.setState({ listaMoedas: response.data }); })
     .catch(() => { console.log('Erro ao recuperar os dados'); });
   }
 
-
   _onRefresh() {
     this.setState({ refreshing: true });
-    axios.get('https://api.coinmarketcap.com/v1/ticker/?convert=BRL&limit=15')
+    axios.get('https://api.coinmarketcap.com/v1/ticker/?convert=BRL&limit=20')
     .then(response => { this.setState({ listaMoedas: response.data, refreshing: false }); })
     .catch(() => { console.log('Erro ao recuperar os dados'); });
   }
@@ -37,7 +36,7 @@ export default class Cotacoes extends Component<{}> {
                             />
                             }
         >
-          <Text style={{ textAlign: 'center', fontSize: 20 }}>Cotações das Principais Moedas</Text>
+          <Text style={{ textAlign: 'center', fontSize: 20 }}>TOP 20 Moedas</Text>
           { this.state.listaMoedas.map(item => (<Valores key={item.symbol} item={item} />))}
         </ScrollView>
         <Rodape />
