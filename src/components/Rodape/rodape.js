@@ -8,9 +8,9 @@ export default class Rodape extends Component<{}> {
       style={{
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#008f00',
-        borderWidth: 0.25,
-        borderColor: 'gray',
+        backgroundColor: 'orange',
+        // borderWidth: 0.25,
+        // borderColor: 'gray',
         height: 30 }}
       >
         <Text style={{ color: 'white', fontSize: 11, textAlign: 'center' }}>

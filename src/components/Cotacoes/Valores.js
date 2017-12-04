@@ -165,12 +165,12 @@ const styles = StyleSheet.create({
       //flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'center',
-      width: 50
+      width: 70
     },
     ValorView: {
       alignItems: 'flex-end',
       justifyContent: 'center',
-      width: 170
+      width: 180
     },
     Nome: {
       fontSize: 12,
@@ -181,12 +181,12 @@ const styles = StyleSheet.create({
       fontFamily: 'tahoma'
     },
     PorcentagemPos: {
-      fontSize: 14,
+      fontSize: 12,
       color: 'green',
 
     },
     PorcentagemNeg: {
-      fontSize: 14,
+      fontSize: 12,
       color: 'red'
     },
     Valor: {
@@ -196,8 +196,8 @@ const styles = StyleSheet.create({
       // marginRight: 10
     },
     ValorBTC: {
-      fontSize: 13,
-      color: 'orange',
+      fontSize: 12,
+      color: 'gray',
       // paddingHorizontal: 10
     },
     Icone: {

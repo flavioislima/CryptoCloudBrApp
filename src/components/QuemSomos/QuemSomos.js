@@ -12,7 +12,6 @@ const alan = require('./membros/alan.jpg');
 const terra = require('./membros/terra.jpg');
 const vitor = require('./membros/vitor.jpg');
 const cereja = require('./membros/cereja.jpg');
-const toledo = require('./membros/toledo.jpg');
 
 export default class QuemSomos extends Component<{}> {
   render() {
@@ -31,23 +30,16 @@ export default class QuemSomos extends Component<{}> {
                 <Image source={flavio} style={styles.Imagem} />
                 <View style={{ marginLeft: 5 }}>
                   <Text style={styles.Nome}>Flávio Lima</Text>
-                  <Text style={styles.Descricao}>Desenvolvedor de Aplicações e Trading</Text>
+                  <Text style={styles.Descricao}>Desenvolvedor e Trading</Text>
                 </View>
               </View>
+
             <View style={styles.TitleView}>
               <Image source={alan} style={styles.Imagem} />
               <View style={{ marginLeft: 5 }}>
                 <Text style={styles.Nome}>Alan Lago</Text>
                 <Text style={styles.Descricao}>Gerente de Infraestura</Text>
               </View>
-
-            </View>
-              <View style={styles.TitleView}>
-                <Image source={toledo} style={styles.Imagem} />
-                <View style={{ marginLeft: 5 }}>
-                  <Text style={styles.Nome}>Felipe Toledo</Text>
-                  <Text style={styles.Descricao}>Desenvolvedor Web</Text>
-                </View>
             </View>
 
             <View style={styles.TitleView}>
@@ -73,6 +65,7 @@ export default class QuemSomos extends Component<{}> {
                 <Text style={styles.Descricao}>Marketing e Vendas</Text>
               </View>
             </View>
+
           </View>
         </View>
 

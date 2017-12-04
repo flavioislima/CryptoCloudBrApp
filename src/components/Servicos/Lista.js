@@ -19,11 +19,11 @@ export default class Lista extends Component<{}> {
           </View>
           <View style={styles.ItemView}>
             <Text style={styles.Titulo}>Mineração de CriptoMoedas em Nuvem</Text>
-            <Text style={styles.Descricao}>Para você deseja Minerar Moedas como Bitcoin,
-            Ethereum, Monero ou Dash mas não deseja investir num Equipamento específico,
+            <Text style={styles.Descricao}>Para você que deseja Minerar Moedas como Bitcoin,
+            Ethereum, Monero ou Dash mas não deseja investir num Equipamento específico
             bem como toda a configuração e manutenção envolvida.
-            Alugamos o poder de mineração de nosso maquinário e não cobramos taxa de manutenção
-            alguma e você poderá acompanhar seus ganhos diariamente.
+            Alugamos o poder de mineração de nossas mineradoras e não cobramos taxa de manutenção
+            alguma e você poderá acompanhar seus ganhos diariamente pelo App.
             </Text>
             <Text style={styles.button}>Conheça nossos Planos de Mineração</Text>
           </View>
@@ -32,9 +32,8 @@ export default class Lista extends Component<{}> {
             <Text style={styles.Titulo}>Compra e Venda de Moedas</Text>
             <Text style={styles.Descricao}>A CryptoCloudBrasil também trabalha como
             corretora de CriptoMoedas, na verdade, nos destacamos de nossos concorrentes
-            nesse quesito por oferecer a compra e venda das 10 principais moedas do mercado.
-            Aleḿ das tradicionais Bitcoin, Bitcoin Cash e Litecoin, a CryptoCloudBrasil oferece
-            também Dash, Monero, Zcash, Ripple, entre outras, tudo isso disponível em nosso App.
+            por oferecer um portifólio mais difersificado contendo também Dash, Monero,
+            Zcash, Ripple, entre outras, tudo isso disponível em nosso App.
             </Text>
             <Text style={styles.button} >App de Compra e Venda de Moedas</Text>
           </View>
@@ -61,7 +60,7 @@ const styles = StyleSheet.create({
       backgroundColor: 'white'
     },
     ServicosView: {
-      flex: 8,
+      flex: 1,
       justifyContent: 'center'
     },
     ItemView: {
@@ -89,7 +88,7 @@ const styles = StyleSheet.create({
       fontWeight: 'bold',
       alignSelf: 'center',
       marginTop: 5,
-      marginBottom: 10,
+      marginBottom: 5,
       textDecorationLine: 'underline'
     },
   });
