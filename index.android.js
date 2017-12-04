@@ -15,7 +15,7 @@ class CryptoCloudBR extends Component<{}> {
             <Scene
             key='main' component={MainScreen} title="CryptoCloudBrasil"
             titleStyle={{ alignSelf: 'center', color: 'white' }}
-            headerStyle={{ backgroundColor: 'orange' }}
+            headerStyle={{ backgroundColor: 'orange' }} hideNavBar
             />
             <Scene
             key='contato' component={Contatos} title="Nossos Contatos"
@@ -31,7 +31,8 @@ class CryptoCloudBR extends Component<{}> {
             <Scene
             key='cotacoes' component={Cotacoes} title="Cotações"
             titleStyle={{ marginHorizontal: 10, color: 'white' }}
-            headerStyle={{ backgroundColor: '#008f00' }}
+            headerStyle={{ backgroundColor: 'orange' }}
+            initial
             />
             <Scene
             key='quemsomos' component={QuemSomos} title="Quem Somos"
