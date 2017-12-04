@@ -3,8 +3,10 @@ import {
   Text,
   View,
   StyleSheet,
-  Image
+  Image,
+  BackHandler
 } from 'react-native';
+import { Actions } from 'react-native-router-flux';
 import Rodape from '../Rodape/rodape';
 
 const flavio = require('./membros/flavio.jpg');
@@ -12,6 +14,14 @@ const alan = require('./membros/alan.jpg');
 const terra = require('./membros/terra.jpg');
 const vitor = require('./membros/vitor.jpg');
 const cereja = require('./membros/cereja.jpg');
+
+BackHandler.addEventListener('hardwareBackPress', () => {
+ if (Actions.currentScene !== Actions.MainScreen) {
+   Actions.pop();
+   return true;
+ }
+ return false;
+});
 
 export default class QuemSomos extends Component<{}> {
   render() {

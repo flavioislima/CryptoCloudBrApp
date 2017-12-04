@@ -1,8 +1,17 @@
 import React, { Component } from 'react';
-import { Text, View, ScrollView, RefreshControl } from 'react-native';
+import { Text, View, ScrollView, RefreshControl, BackHandler } from 'react-native';
+import { Actions } from 'react-native-router-flux';
 import axios from 'axios';
 import Valores from './Valores';
 import Rodape from '../Rodape/rodape';
+
+BackHandler.addEventListener('hardwareBackPress', () => {
+ if (Actions.currentScene !== Actions.MainScreen) {
+   Actions.pop();
+   return true;
+ }
+ return false;
+});
 
 export default class Cotacoes extends Component<{}> {
   constructor(props) {

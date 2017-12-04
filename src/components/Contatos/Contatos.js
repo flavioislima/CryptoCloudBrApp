@@ -3,11 +3,19 @@ import {
   Text,
   View,
   StyleSheet,
-  Image,
-  KeyboardAvoidingView
+  BackHandler
 } from 'react-native';
-import FormContato from './FormContato';
+import { Actions } from 'react-native-router-flux';
+//import FormContato from './FormContato';
 import Rodape from '../Rodape/rodape';
+
+BackHandler.addEventListener('hardwareBackPress', () => {
+ if (Actions.currentScene !== Actions.MainScreen) {
+   Actions.pop();
+   return true;
+ }
+ return false;
+});
 
 export default class Contatos extends Component<{}> {
   render() {

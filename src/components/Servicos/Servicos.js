@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
 import {
-  Text,
   View,
-  StyleSheet,
-  Image
+  BackHandler
 } from 'react-native';
+import { Actions } from 'react-native-router-flux';
 import Lista from './Lista';
 import Rodape from '../Rodape/rodape';
+
+BackHandler.addEventListener('hardwareBackPress', () => {
+ if (Actions.currentScene !== Actions.MainScreen) {
+   Actions.pop();
+   return true;
+ }
+ return false;
+});
 
 export default class Servicos extends Component<{}> {
   render() {
