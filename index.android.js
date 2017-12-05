@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { AppRegistry } from 'react-native';
-import { Scene, Router, Stack, Actions } from 'react-native-router-flux';
+import { Scene, Router, Stack, } from 'react-native-router-flux';
 import MainScreen from './src/components/MainScreen/MainScreen';
 import Contatos from './src/components/Contatos/Contatos';
 import Servicos from './src/components/Servicos/Servicos';
@@ -31,12 +31,12 @@ class CryptoCloudBR extends Component<{}> {
             key='cotacoes' component={Cotacoes} title="Cotações"
             titleStyle={{ marginHorizontal: 95, color: 'white' }}
             headerStyle={{ backgroundColor: 'orange', height: 35 }}
-
             />
             <Scene
             key='quemsomos' component={QuemSomos} title="Quem Somos"
             titleStyle={{ paddingLeft: 58, color: 'white' }}
             headerStyle={{ backgroundColor: 'orange', height: 35 }}
+            initial
 
             />
           </Stack>
