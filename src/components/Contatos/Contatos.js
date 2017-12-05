@@ -30,7 +30,7 @@ export default class Contatos extends Component<{}> {
     return (
       <View style={styles.MainView}>
           <View style={styles.ListaView}>
-            <Text style={styles.TextTitle}>CryptoCloudBR nas Mídias</Text>
+            <Text style={styles.TextTitle}>Crypto Social Mídia</Text>
               <TouchableOpacity
               style={styles.ContatoView}
               onPress={() => Linking.openURL('http://cryptocloudbrasil.com.br')}
@@ -38,28 +38,28 @@ export default class Contatos extends Component<{}> {
                 <Image
                 style={styles.Imagens} source={logo}
                 />
-                <Text style={styles.Contatos}>Site: CryptoCloudBrasil.com.br</Text>
+                <Text style={styles.Contatos}>CryptoCloudBrasil.com.br</Text>
               </TouchableOpacity>
               <TouchableOpacity
               style={styles.ContatoView}
               onPress={() => Linking.openURL('https://twitter.com/CryptoCloudBR')}
               >
               <Image style={styles.Imagens} source={twitter} />
-              <Text style={styles.Contatos}>Twitter.com/CryptoCloudBR</Text>
+              <Text style={styles.Contatos}>CryptoCloudBR</Text>
             </TouchableOpacity>
             <TouchableOpacity
             style={styles.ContatoView}
             onPress={() => Linking.openURL('https://www.facebook.com/Cryptocloudbrasil/')}
             >
               <Image style={styles.Imagens} source={facebook} />
-              <Text style={styles.Contatos}>Facebook.com/Cryptocloudbrasil</Text>
+              <Text style={styles.Contatos}>Cryptocloudbrasil</Text>
             </TouchableOpacity>
             <TouchableOpacity
             style={styles.ContatoView}
             onPress={() => Linking.openURL('mailto:cryptocloudbrasil@gmail.com')}
             >
               <Image style={styles.Imagens} source={email} />
-              <Text style={styles.Contatos}>CryptoCloudBrasil@Gmail.com</Text>
+              <Text style={styles.Contatos}>Contato@CryptoCloudBrasil.com.br</Text>
             </TouchableOpacity>
           </View>
           <Rodape />
@@ -93,12 +93,12 @@ const styles = StyleSheet.create({
       color: 'orange',
       fontWeight: 'bold',
       textAlign: 'center',
-      paddingBottom: 28,
+      paddingBottom: 48,
       textDecorationLine: 'underline'
     },
     Imagens: {
-      width: 100,
-      height: 100
+      width: 75,
+      height: 75
     },
     Contatos: {
         fontSize: 14,
