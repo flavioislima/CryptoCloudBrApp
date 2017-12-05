@@ -18,7 +18,7 @@ BackHandler.addEventListener('hardwareBackPress', () => {
 
 export default class Servicos extends Component<{}> {
   render() {
-    const corPrimaria = 'gray';
+    const corPrimaria = '#938FB1';
     return (
       <View style={{ flex: 1 }}>
         <View style={{ flex: 8 }}>

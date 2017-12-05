@@ -26,7 +26,7 @@ BackHandler.addEventListener('hardwareBackPress', () => {
 
 export default class QuemSomos extends Component<{}> {
   render() {
-    const corPrimaria = 'lightblue';
+    const corPrimaria = '#837A7F';
     return (
       <View style={styles.MainView}>
         <View style={styles.AboutView}>

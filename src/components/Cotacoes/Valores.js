@@ -12,10 +12,12 @@ export default class Valores extends Component<{}> {
     const Nome = this.props.item.name;
     const BTC = this.props.item.price_btc;
     const BRL = this.props.item.price_brl;
+    const USD = this.props.item.price_usd;
     const Reais = numeral(parseFloat(BRL)).format('0,0.00');
-    // const Porcentagem1h = this.props.item.percent_change_1h;
+    const Dolar = numeral(parseFloat(USD)).format('0,0.00');
+    const Porcentagem1h = this.props.item.percent_change_1h;
     const Porcentagem24h = this.props.item.percent_change_24h;
-    // const Porcentagem7d = this.props.item.percent_change_7d;
+    const Porcentagem7d = this.props.item.percent_change_7d;
     const symbol = this.props.item.symbol;
 
     const btc = require('./icones/btc.png');
@@ -38,6 +40,7 @@ export default class Valores extends Component<{}> {
     const neo = require('./icones/neo.png');
     const xem = require('./icones/xem.png');
     const zec = require('./icones/zec.png');
+    const generico = require('./icones/generico.png');
 
     let Icone;
 
@@ -107,12 +110,23 @@ export default class Valores extends Component<{}> {
         break;
       }
 
-const Porcentagem = () => {
-  if (Porcentagem24h >= 0) {
-      return (<Text style={styles.PorcentagemPos}>+{Porcentagem24h}%</Text>);
-  } return (<Text style={styles.PorcentagemNeg}>{Porcentagem24h}%</Text>);
+const Porcent1h = () => {
+  if (Porcentagem1h >= -0.01) {
+   return (<Text style={styles.PorcentagemPos}>1h: {Porcentagem1h}%</Text>);
+ } return (<Text style={styles.PorcentagemNeg}>1h: {Porcentagem1h}%</Text>);
 };
 
+const Porcent24h = () => {
+  if (Porcentagem24h >= -0.01) {
+   return (<Text style={styles.PorcentagemPos}>24h: {Porcentagem24h}%</Text>);
+ } return (<Text style={styles.PorcentagemNeg}>24h: {Porcentagem24h}%</Text>);
+};
+
+const Porcent7d = () => {
+  if (Porcentagem7d >= -0.01) {
+   return (<Text style={styles.PorcentagemPos}>7d: {Porcentagem7d}%</Text>);
+ } return (<Text style={styles.PorcentagemNeg}>7d: {Porcentagem7d}%</Text>);
+};
     return (
       <View style={styles.MainView}>
 
@@ -123,11 +137,14 @@ const Porcentagem = () => {
           </View>
           <View style={styles.InfoView}>
             <View style={styles.PercentView}>
-              <Porcentagem />
+              <Porcent1h />
+              <Porcent24h />
+              <Porcent7d />
             </View>
             <View style={styles.ValorView}>
                 <Text style={styles.Valor}>R$ {Reais}</Text>
-                <Text style={styles.ValorBTC}>{BTC} btc</Text>
+                <Text style={styles.Valor}>U$ {Dolar}</Text>
+                <Text style={styles.ValorBTC}>{BTC} BTC</Text>
             </View>
           </View>
         </View>
@@ -163,14 +180,14 @@ const styles = StyleSheet.create({
     },
     PercentView: {
       //flexDirection: 'row',
-      alignItems: 'center',
+      //alignItems: 'center',
       justifyContent: 'center',
-      width: 70
+      width: 85
     },
     ValorView: {
       alignItems: 'flex-end',
       justifyContent: 'center',
-      width: 180
+      width: 160
     },
     Nome: {
       fontSize: 12,
@@ -190,7 +207,7 @@ const styles = StyleSheet.create({
       color: 'red'
     },
     Valor: {
-      fontSize: 18,
+      fontSize: 16,
       fontWeight: 'bold',
       color: 'orange',
       // marginRight: 10

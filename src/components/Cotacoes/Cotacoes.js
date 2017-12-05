@@ -52,7 +52,7 @@ export default class Cotacoes extends Component<{}> {
   }
 
   render() {
-    const corPrimaria = 'lightgreen';
+    const corPrimaria = '#C0BFEA';
     return (
       <View style={{ flex: 1 }}>
         <ScrollView
