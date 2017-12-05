@@ -143,7 +143,7 @@ const Porcent7d = () => {
             </View>
             <View style={styles.ValorView}>
                 <Text style={styles.Valor}>R$ {Reais}</Text>
-                <Text style={styles.Valor}>U$ {Dolar}</Text>
+                <Text style={styles.ValorBTC}>U$ {Dolar}</Text>
                 <Text style={styles.ValorBTC}>{BTC} BTC</Text>
             </View>
           </View>
@@ -207,13 +207,13 @@ const styles = StyleSheet.create({
       color: 'red'
     },
     Valor: {
-      fontSize: 16,
+      fontSize: 17,
       fontWeight: 'bold',
       color: 'orange',
       // marginRight: 10
     },
     ValorBTC: {
-      fontSize: 12,
+      fontSize: 13,
       color: 'gray',
       // paddingHorizontal: 10
     },
