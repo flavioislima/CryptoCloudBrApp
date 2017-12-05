@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {
-  Text,
   View,
   ScrollView,
   RefreshControl,
@@ -9,6 +8,7 @@ import {
 import { Actions } from 'react-native-router-flux';
 import axios from 'axios';
 import Valores from './Valores';
+import Cabecalho from '../Cabecalho/Cabecalho';
 import Rodape from '../Rodape/rodape';
 
 BackHandler.addEventListener('hardwareBackPress', () => {
@@ -52,6 +52,7 @@ export default class Cotacoes extends Component<{}> {
   }
 
   render() {
+    const corPrimaria = 'lightgreen';
     return (
       <View style={{ flex: 1 }}>
         <ScrollView
@@ -63,10 +64,10 @@ export default class Cotacoes extends Component<{}> {
                             />
                             }
         >
-        <Text style={{ textAlign: 'center', fontSize: 20 }}>TOP 20 Moedas</Text>
+        <Cabecalho descricao="TOP 20 Moedas" corFundo={corPrimaria} />
           { this.state.listaMoedas.map(item => (<Valores key={item.symbol} item={item} />))}
         </ScrollView>
-        <Rodape />
+        <Rodape corFundo={corPrimaria} />
       </View>
     );
   }

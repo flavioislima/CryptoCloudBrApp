@@ -4,7 +4,8 @@ import {
   Image,
   TouchableOpacity,
   Text,
-  StyleSheet
+  StyleSheet,
+  StatusBar
 } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import Rodape from '../Rodape/rodape';
@@ -18,8 +19,10 @@ const about = require('../QuemSomos/quemsomos.png');
 
 export default class MainScreen extends Component<{}> {
   render() {
+    const corPrimaria = 'orange';
     return (
         <View style={styles.MainView}>
+          <StatusBar backgroundColor={corPrimaria} />
           <View style={styles.LogoView}>
             <Image source={logo} style={styles.LogoIcon} />
           </View>
@@ -38,14 +41,14 @@ export default class MainScreen extends Component<{}> {
           <View style={styles.IconsView}>
           <TouchableOpacity onPress={() => Actions.contato()}>
             <Image source={contato} style={styles.Icons} />
-            <Text style={styles.TextIcons}>Contato</Text>
+            <Text style={styles.TextIcons}>Contatos</Text>
           </TouchableOpacity>
             <TouchableOpacity onPress={() => Actions.quemsomos()}>
               <Image source={about} style={styles.Icons} />
               <Text style={styles.TextIcons}>Quem Somos</Text>
             </TouchableOpacity>
           </View>
-          <Rodape />
+          <Rodape corFundo={corPrimaria} />
         </View>
     );
   }

@@ -9,6 +9,7 @@ import {
   TouchableOpacity
 } from 'react-native';
 import { Actions } from 'react-native-router-flux';
+import Cabecalho from '../Cabecalho/Cabecalho';
 import Rodape from '../Rodape/rodape';
 
 BackHandler.addEventListener('hardwareBackPress', () => {
@@ -27,10 +28,11 @@ const email = require('./icones/email.png');
 
 export default class Contatos extends Component<{}> {
   render() {
+    const corPrimaria = 'skyblue';
     return (
       <View style={styles.MainView}>
+      <Cabecalho descricao="Redes Sociais" corFundo={corPrimaria} />
           <View style={styles.ListaView}>
-            <Text style={styles.TextTitle}>Crypto Social Mídia</Text>
               <TouchableOpacity
               style={styles.ContatoView}
               onPress={() => Linking.openURL('http://cryptocloudbrasil.com.br')}
@@ -62,7 +64,7 @@ export default class Contatos extends Component<{}> {
               <Text style={styles.Contatos}>Contato@CryptoCloudBrasil.com.br</Text>
             </TouchableOpacity>
           </View>
-          <Rodape />
+          <Rodape corFundo={corPrimaria} />
       </View>
     );
   }
@@ -75,18 +77,17 @@ const styles = StyleSheet.create({
     ListaView: {
       flex: 7,
       // alignItems: 'center',
-       justifyContent: 'center'
+       //justifyContent: 'center'
     },
     ContatoView: {
       flexDirection: 'row',
       // borderWidth: 0.25,
       // borderColor: 'black',
       marginHorizontal: 1,
-      marginVertical: 2.5,
+      marginVertical: 5,
       paddingVertical: 2,
       alignItems: 'center',
       //justifyContent: 'center'
-
     },
     TextTitle: {
       fontSize: 21,

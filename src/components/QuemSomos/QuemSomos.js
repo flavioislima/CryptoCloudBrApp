@@ -7,6 +7,7 @@ import {
   BackHandler
 } from 'react-native';
 import { Actions } from 'react-native-router-flux';
+import Cabecalho from '../Cabecalho/Cabecalho';
 import Rodape from '../Rodape/rodape';
 
 const flavio = require('./membros/flavio.jpg');
@@ -25,12 +26,11 @@ BackHandler.addEventListener('hardwareBackPress', () => {
 
 export default class QuemSomos extends Component<{}> {
   render() {
+    const corPrimaria = 'lightblue';
     return (
       <View style={styles.MainView}>
         <View style={styles.AboutView}>
-          <Text style={styles.TextTitulo}>
-          O que é a CryptoCloudBR?
-          </Text>
+          <Cabecalho descricao="Quem Somos" corFundo={corPrimaria} />
           <Text style={styles.TextAbout}>
           A CryptoCloudBR é uma StartUp que visa resolver problemas e atender demanda de
           investidores brasileiros no mercado de mineração,
@@ -93,7 +93,7 @@ export default class QuemSomos extends Component<{}> {
           </View>
         </View>
 
-        <Rodape />
+        <Rodape corFundo={corPrimaria} />
 
       </View>
     );
@@ -120,13 +120,6 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       flexDirection: 'row',
       backgroundColor: 'white',
-    },
-    TextTitulo: {
-      fontSize: 15,
-      color: 'orange',
-      fontWeight: 'bold',
-      textAlign: 'center',
-      // width: '85%'
     },
     TextAbout: {
       fontSize: 13,

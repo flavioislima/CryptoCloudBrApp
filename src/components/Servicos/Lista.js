@@ -65,8 +65,8 @@ const styles = StyleSheet.create({
     },
     ItemView: {
       marginHorizontal: 5,
-      borderBottomWidth: 0.25,
-      borderBottomColor: 'orange',
+      // borderBottomWidth: 0.25,
+      // borderBottomColor: 'orange',
       marginBottom: 2.5
     },
     Titulo: {

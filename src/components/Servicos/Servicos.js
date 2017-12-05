@@ -5,6 +5,7 @@ import {
 } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import Lista from './Lista';
+import Cabecalho from '../Cabecalho/Cabecalho';
 import Rodape from '../Rodape/rodape';
 
 BackHandler.addEventListener('hardwareBackPress', () => {
@@ -17,12 +18,14 @@ BackHandler.addEventListener('hardwareBackPress', () => {
 
 export default class Servicos extends Component<{}> {
   render() {
+    const corPrimaria = 'gray';
     return (
       <View style={{ flex: 1 }}>
         <View style={{ flex: 8 }}>
+        <Cabecalho descricao="Nossos Serviços" corFundo={corPrimaria} />
           <Lista />
         </View>
-        <Rodape />
+        <Rodape corFundo={corPrimaria} />
       </View>
     );
   }
