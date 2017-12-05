@@ -28,15 +28,29 @@ export default class QuemSomos extends Component<{}> {
     return (
       <View style={styles.MainView}>
         <View style={styles.AboutView}>
+          <Text style={styles.TextTitulo}>
+          O que é a CryptoCloudBR?
+          </Text>
           <Text style={styles.TextAbout}>
-          Corretora, Controladora de Fundos e Mineradora de CryptoMoedas.
+          A CryptoCloudBR é uma StartUp que visa resolver problemas e atender demanda de
+          investidores brasileiros no mercado de mineração,
+          compra, venda e troca de moedas e ativos digitais,
+          não se limitando somente a venda de bitcoins.
+          Ex.: Bitcoin, Ethereum, IOTA, Dash, ZCash, etc.
+          A empresa busca desenvolver soluções dentre as quais se destacam
+          a mineração e nuvem e os aplicativos para venda e troca, tanto de moedas
+          quanto de produtos por moedas. Também pretende abrir a primeira exchange
+          P2P do país, facilitando assim, a troca, compra e venda de moedas diretamente
+          pelos usuários, sem intermédio bancário.
           </Text>
         </View>
 
-
-          <View style={styles.ImagesView}>
-            <View style={{ flex: 3 }}>
-              <View style={styles.TitleView}>
+        <View style={styles.ImagesView}>
+          <View style={{ flex: 3 }}>
+            <Text style={{ textAlign: 'center', fontSize: 15, fontWeight: 'bold' }}>
+            Membros
+            </Text>
+              <View style={styles.SociosView}>
                 <Image source={flavio} style={styles.Imagem} />
                 <View style={{ marginLeft: 5 }}>
                   <Text style={styles.Nome}>Flávio Lima</Text>
@@ -44,7 +58,7 @@ export default class QuemSomos extends Component<{}> {
                 </View>
               </View>
 
-            <View style={styles.TitleView}>
+            <View style={styles.SociosView}>
               <Image source={alan} style={styles.Imagem} />
               <View style={{ marginLeft: 5 }}>
                 <Text style={styles.Nome}>Alan Lago</Text>
@@ -52,7 +66,7 @@ export default class QuemSomos extends Component<{}> {
               </View>
             </View>
 
-            <View style={styles.TitleView}>
+            <View style={styles.SociosView}>
               <Image source={vitor} style={styles.Imagem} />
               <View style={{ marginLeft: 5 }}>
                 <Text style={styles.Nome}>Vitor Abel</Text>
@@ -60,7 +74,7 @@ export default class QuemSomos extends Component<{}> {
               </View>
             </View>
 
-            <View style={styles.TitleView}>
+            <View style={styles.SociosView}>
               <Image source={terra} style={styles.Imagem} />
               <View style={{ marginLeft: 5 }}>
                 <Text style={styles.Nome}>Jonatas Terra</Text>
@@ -68,7 +82,7 @@ export default class QuemSomos extends Component<{}> {
               </View>
             </View>
 
-            <View style={styles.TitleView}>
+            <View style={styles.SociosView}>
               <Image source={cereja} style={styles.Imagem} />
               <View style={{ marginLeft: 5 }}>
                 <Text style={styles.Nome}>Matheus Cereja</Text>
@@ -91,11 +105,11 @@ const styles = StyleSheet.create({
       flex: 1,
       backgroundColor: 'white'
     },
-    AboutView: {
+    SobreView: {
       flex: 1,
       marginLeft: 5,
     },
-    TitleView: {
+    SociosView: {
       flexDirection: 'row',
       alignItems: 'center',
       margin: 5,
@@ -107,21 +121,16 @@ const styles = StyleSheet.create({
       flexDirection: 'row',
       backgroundColor: 'white',
     },
-    BottomView: {
-      flex: 0.5,
-      alignItems: 'center',
-      justifyContent: 'center',
-      backgroundColor: 'orange',
-      borderWidth: 0.25,
-      borderColor: 'gray'
-    },
-    TextTitle: {
-      fontSize: 16,
+    TextTitulo: {
+      fontSize: 15,
       color: 'orange',
       fontWeight: 'bold',
+      textAlign: 'center',
+      // width: '85%'
     },
     TextAbout: {
-      fontSize: 14,
+      fontSize: 13,
+      textAlign: 'center'
 
       },
     Nome: {

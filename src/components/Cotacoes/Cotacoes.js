@@ -4,8 +4,7 @@ import {
   View,
   ScrollView,
   RefreshControl,
-  BackHandler,
-  ActivityIndicator
+  BackHandler
 } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import axios from 'axios';
