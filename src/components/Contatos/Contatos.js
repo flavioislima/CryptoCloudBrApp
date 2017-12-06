@@ -76,16 +76,15 @@ const styles = StyleSheet.create({
     },
     ListaView: {
       flex: 7,
-      // alignItems: 'center',
-       //justifyContent: 'center'
+      marginVertical: 20,
+      //justifyContent: 'center'
     },
     ContatoView: {
       flexDirection: 'row',
-      // borderWidth: 0.25,
-      // borderColor: 'black',
-      marginHorizontal: 1,
-      marginVertical: 5,
-      paddingVertical: 2,
+      marginHorizontal: 8,
+      marginVertical: 8,
+      paddingVertical: 8,
+      paddingHorizontal: 6,
       alignItems: 'center',
       //justifyContent: 'center'
     },
@@ -98,8 +97,8 @@ const styles = StyleSheet.create({
       textDecorationLine: 'underline'
     },
     Imagens: {
-      width: 75,
-      height: 75
+      width: 65,
+      height: 65
     },
     Contatos: {
         fontSize: 14,
