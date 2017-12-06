@@ -55,15 +55,13 @@ export default class Cotacoes extends Component<{}> {
     const corPrimaria = '#458d63';
     return (
       <View style={{ flex: 1 }}>
+
         <ScrollView
           style={{ flex: 8 }}
            refreshControl={
                             <RefreshControl
                               refreshing={this.state.refreshing}
                               onRefresh={this.onRefresh.bind(this)}
-                              title='Carregando'
-                              tintColor='green'
-
                             />
                             }
         >
