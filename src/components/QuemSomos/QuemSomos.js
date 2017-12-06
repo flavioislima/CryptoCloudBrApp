@@ -35,10 +35,10 @@ export default class QuemSomos extends Component<{}> {
           A CryptoCloudBR é uma StartUp que visa resolver problemas e atender demanda de
           investidores brasileiros no mercado de mineração,
           compra, venda e troca de moedas e ativos digitais,
-          não se limitando somente a venda de bitcoins.
-          Ex.: Bitcoin, Ethereum, IOTA, Dash, ZCash, etc.
+          não se limitando somente a venda de Bitcoins, mas também de Ethereum, IOTA,
+          Dash, ZCash, entre outras.
           A empresa busca desenvolver soluções dentre as quais se destacam
-          a mineração e nuvem e os aplicativos para venda e troca, tanto de moedas
+          a mineração em nuvem e os aplicativos para venda e troca, tanto de moedas,
           quanto de produtos por moedas. Também pretende abrir a primeira exchange
           P2P do país, facilitando assim, a troca, compra e venda de moedas diretamente
           pelos usuários, sem intermédio bancário.

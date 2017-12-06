@@ -9,7 +9,9 @@ import numeral from 'numeral';
 
 export default class Valores extends Component<{}> {
   render() {
+    const symbol = this.props.item.symbol;
     const Nome = this.props.item.name;
+    const Rank = this.props.item.rank;
     const BTC = this.props.item.price_btc;
     const BRL = this.props.item.price_brl;
     const USD = this.props.item.price_usd;
@@ -18,7 +20,6 @@ export default class Valores extends Component<{}> {
     const Porcentagem1h = this.props.item.percent_change_1h;
     const Porcentagem24h = this.props.item.percent_change_24h;
     const Porcentagem7d = this.props.item.percent_change_7d;
-    const symbol = this.props.item.symbol;
 
     const btc = require('./icones/btc.png');
     const bch = require('./icones/bch.png');
@@ -132,7 +133,7 @@ const Porcent7d = () => {
 
         <View style={styles.MoedasView}>
           <View style={styles.NomeView}>
-            <Text style={styles.Nome}>{Nome}</Text>
+            <Text style={styles.Nome}>{Rank}° {Nome}</Text>
             <Image style={styles.Icone} source={Icone} />
           </View>
           <View style={styles.InfoView}>
@@ -168,7 +169,7 @@ const styles = StyleSheet.create({
       borderColor: 'gray'
     },
     NomeView: {
-      width: 100,
+      width: 115,
       //borderWidth: 0.5,
       //borderColor: 'black',
       alignItems: 'center',
@@ -182,29 +183,31 @@ const styles = StyleSheet.create({
       //flexDirection: 'row',
       //alignItems: 'center',
       justifyContent: 'center',
-      width: 85
+      width: 88
     },
     ValorView: {
       alignItems: 'flex-end',
       justifyContent: 'center',
-      width: 160
+      width: 150
     },
     Nome: {
       fontSize: 12,
       fontWeight: 'bold',
       color: 'orange',
       textAlign: 'center',
-      marginVertical: 2.5,
+      marginVertical: 0.5,
       fontFamily: 'tahoma'
     },
     PorcentagemPos: {
       fontSize: 12,
       color: 'green',
+      paddingLeft: 8
 
     },
     PorcentagemNeg: {
       fontSize: 12,
-      color: 'red'
+      color: 'red',
+      paddingLeft: 8
     },
     Valor: {
       fontSize: 17,

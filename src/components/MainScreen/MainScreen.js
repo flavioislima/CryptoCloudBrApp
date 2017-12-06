@@ -5,7 +5,8 @@ import {
   TouchableOpacity,
   Text,
   StyleSheet,
-  StatusBar
+  StatusBar,
+  BackHandler
 } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import Rodape from '../Rodape/rodape';
@@ -16,6 +17,10 @@ const cotacoes = require('../Cotacoes/cotacoes.png');
 const services = require('../Servicos/servicos.png');
 const about = require('../QuemSomos/quemsomos.png');
 
+// BackHandler.addEventListener('hardwareBackPress', () => {
+//  BackHandler.exitApp('hardwareBackPress');
+// }
+// );
 
 export default class MainScreen extends Component<{}> {
   render() {

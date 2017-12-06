@@ -26,6 +26,7 @@ class CryptoCloudBR extends Component<{}> {
             key='servicos' component={Servicos} title="Nossos Serviços"
             titleStyle={{ paddingLeft: 45, color: 'orange' }}
             headerStyle={{ backgroundColor: 'white', height: 35 }} hideNavBar
+            initial
             />
             <Scene
             key='cotacoes' component={Cotacoes}
@@ -36,7 +37,7 @@ class CryptoCloudBR extends Component<{}> {
             key='quemsomos' component={QuemSomos} title="Quem Somos"
             titleStyle={{ paddingLeft: 58, color: 'orange' }}
             headerStyle={{ backgroundColor: 'white', height: 35 }} hideNavBar
-            
+
             />
           </Stack>
         </Router>
