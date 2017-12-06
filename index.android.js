@@ -25,8 +25,7 @@ class CryptoCloudBR extends Component<{}> {
             <Scene
             key='servicos' component={Servicos} title="Nossos Serviços"
             titleStyle={{ paddingLeft: 45, color: 'orange' }}
-            headerStyle={{ backgroundColor: 'white', height: 35 }} hideNavBar
-            initial
+            headerStyle={{ backgroundColor: 'white', height: 35 }} hideNavBar      
             />
             <Scene
             key='cotacoes' component={Cotacoes}
