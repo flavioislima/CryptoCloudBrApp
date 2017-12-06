@@ -17,10 +17,12 @@ const cotacoes = require('../Cotacoes/cotacoes.png');
 const services = require('../Servicos/servicos.png');
 const about = require('../QuemSomos/quemsomos.png');
 
-// BackHandler.addEventListener('hardwareBackPress', () => {
-//  BackHandler.exitApp('hardwareBackPress');
-// }
-// );
+
+const exit = () => BackHandler.exitApp();
+BackHandler.addEventListener('hardwareBackPress', () => {
+   exit();
+   return false;
+});
 
 export default class MainScreen extends Component<{}> {
   render() {
