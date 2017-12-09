@@ -14,8 +14,8 @@ export default class Lista extends Component<{}> {
           <ScrollView style={styles.ItemView}>
             <Text style={styles.Titulo}>Investimentos em CriptoMoedas</Text>
             <Text style={styles.Descricao}>Temos diversos planos de Investimento
-            que cabem no seu bolso e com retorno de até 50% ao ano. Você investe
-            um valor fixo e nós fazemos ele render, aplicando moedas estabelecidas
+            que cabem no seu bolso e com retorno de até 25% ao ano. Você investe
+            um valor fixo e nós fazemos ele render, aplicando em moedas estabelecidas
             e com garantia de retorno. Tudo feito com muito cuidado e muito estudo.
             </Text>
             <Text style={styles.button}>Clique Aqui para Conhecê-los</Text>
@@ -25,8 +25,8 @@ export default class Lista extends Component<{}> {
             <Text style={styles.Descricao}>Para você que deseja Minerar Moedas como Bitcoin,
             Ethereum, Monero ou Dash mas não deseja investir num Equipamento específico
             bem como toda a configuração e manutenção envolvida.
-            Alugamos poder de mineração, sem taxas de manutenção
-            e você acompanhará seus ganhos diariamente pelo nosso App.
+            Alugamos nosso poder de mineração e você ainda acompanhará seus
+            ganhos diariamente pelo nosso App.
             Mais informações em Breve.
             </Text>
           </ScrollView>
@@ -35,8 +35,8 @@ export default class Lista extends Component<{}> {
             <Text style={styles.Titulo}>Compra e Venda de Moedas</Text>
             <Text style={styles.Descricao}>A CryptoCloudBrasil também trabalha como
             corretora de CriptoMoedas, na verdade, nos destacamos de nossos concorrentes
-            por oferecer um portifólio mais difersificado contendo também Dash, Monero,
-            Zcash, Ripple, entre outras, tudo isso estará disponível em nosso App.
+            por oferecer um portifólio mais difersificado contendo também IOTA, Dash,
+            Monero, entre outras, tudo isso estará disponível em nosso App.
             </Text>
           </ScrollView>
 

@@ -12,7 +12,7 @@ import { Actions } from 'react-native-router-flux';
 import Rodape from '../Rodape/rodape';
 
 const logo = require('./logo.png');
-const contato = require('../Contatos/contato.png');
+const bitcoin = require('../SobreBitcoin/bitcoin.png');
 const cotacoes = require('../Cotacoes/cotacoes.png');
 const services = require('../Servicos/servicos.png');
 const about = require('../QuemSomos/quemsomos.png');
@@ -46,9 +46,9 @@ export default class MainScreen extends Component<{}> {
             </View>
 
           <View style={styles.IconsView}>
-          <TouchableOpacity onPress={() => Actions.contato()}>
-            <Image source={contato} style={styles.Icons} />
-            <Text style={styles.TextIcons}>Contatos</Text>
+          <TouchableOpacity onPress={() => Actions.sobrebitcoin()}>
+            <Image source={bitcoin} style={styles.Icons} />
+            <Text style={styles.TextIcons}>Sobre Bitcoin</Text>
           </TouchableOpacity>
             <TouchableOpacity onPress={() => Actions.quemsomos()}>
               <Image source={about} style={styles.Icons} />
