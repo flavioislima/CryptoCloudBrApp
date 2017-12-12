@@ -42,9 +42,20 @@ export default class PagerBitcoin extends Component <{}> {
         <Text style={styles.Texto}>Arraste para a próxima página</Text>
       </View>
       <View style={styles.pageStyle} key="5">
-        <Text style={styles.Titulo}>Bitcoin é uma Bolha?</Text>
+        <Text style={styles.Titulo}>O que são AltCoins?</Text>
         <View style={{ flex: 7 }}>
-          <Text style={styles.Texto}>Texto</Text>
+          <Text style={styles.Texto}>Altcoins é um acrônimo para Alternative Coins
+          ou Moedas Alternativas. São outras Cryptomoedas que utilizam os mesmos
+          conceitos iniciados pela Bitcoin como Descentralização, Anonimosidade,
+          Deflacionária, etc. Embora isso varie de moeda para moeda.
+          Algumas das Altcoins mais famosas são: Litecoin, que foi a segunda moeda criada, um
+          ano após a Bitcoin; Ethereum, moeda digital criada entre 2015 e 2016 e apoiada
+          por grandes empresas como Samsung e Microsoft; Ripple, formada por um consórcio
+          liderado pelo banco Santander; IOTA, moeda que visa incluir outros conceitos
+          de Blockchain que não precisa de mineradores para funcionar e focada em desenvolver
+          uma rede única para dispositivos inteligentes; Hoje há quase 2 mil Moedas registradas
+          no site CoinMarketCap, cada uma com um objetivo específico.
+          </Text>
         </View>
         <Text style={styles.Texto}>Arraste para a próxima página</Text>
       </View>
@@ -88,6 +99,7 @@ const styles = StyleSheet.create({
     Texto: {
       fontSize: 14,
       color: 'darkgray',
-      textAlign: 'center'
+      textAlign: 'center',
+      alignSelf: 'center'
     }
   });
