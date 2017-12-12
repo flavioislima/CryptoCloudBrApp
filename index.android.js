@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { AppRegistry, BackHandler, Alert } from 'react-native';
-import { Scene, Router, Stack, Actions } from 'react-native-router-flux';
+import { AppRegistry } from 'react-native';
+import { Scene, Router, Stack } from 'react-native-router-flux';
 import MainScreen from './src/components/MainScreen/MainScreen';
 import SobreBitcoin from './src/components/SobreBitcoin/SobreBitcoin';
 import Servicos from './src/components/Servicos/Servicos';
