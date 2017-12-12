@@ -21,29 +21,7 @@ export default class Valores extends Component<{}> {
     const Porcentagem24h = this.props.item.percent_change_24h;
     const Porcentagem7d = this.props.item.percent_change_7d;
 
-    const btc = require('./icones/btc.png');
-    const bch = require('./icones/bch.png');
-    const eth = require('./icones/eth.png');
-    const etc = require('./icones/etc.png');
-    const xrp = require('./icones/xrp.png');
-    const ltc = require('./icones/ltc.png');
-    const dash = require('./icones/dash.png');
-    const iota = require('./icones/iota.png');
-    const lsk = require('./icones/lsk.png');
-    const xlm = require('./icones/xlm.png');
-    const xmr = require('./icones/xmr.png');
-    const bcc = require('./icones/bcc.png');
-    const ada = require('./icones/ada.png');
-    const btg = require('./icones/btg.png');
-    const eos = require('./icones/eos.png');
-    const qtum = require('./icones/qtum.png');
-    const omg = require('./icones/omg.png');
-    const neo = require('./icones/neo.png');
-    const xem = require('./icones/xem.png');
-    const zec = require('./icones/zec.png');
-    const generico = require('./icones/generico.png');
-
-    let Icone;
+    let Icone = '';
 
     switch (symbol) {
       case 'BTC':
@@ -105,6 +83,15 @@ export default class Valores extends Component<{}> {
         break;
       case 'BCC':
         Icone = bcc;
+        break;
+      case 'WAVES':
+        Icone = waves;
+        break;
+      case 'MONA':
+        Icone = mona;
+        break;
+      case 'PPT':
+        Icone = ppt;
         break;
       default:
         Icone = btc;
@@ -249,3 +236,27 @@ symbol: 'R$'
     }
 });
     numeral.locale('pt-br');
+
+    const btc = require('./icones/btc.png');
+    const bch = require('./icones/bch.png');
+    const eth = require('./icones/eth.png');
+    const etc = require('./icones/etc.png');
+    const xrp = require('./icones/xrp.png');
+    const ltc = require('./icones/ltc.png');
+    const dash = require('./icones/dash.png');
+    const iota = require('./icones/iota.png');
+    const lsk = require('./icones/lsk.png');
+    const xlm = require('./icones/xlm.png');
+    const xmr = require('./icones/xmr.png');
+    const bcc = require('./icones/bcc.png');
+    const ada = require('./icones/ada.png');
+    const btg = require('./icones/btg.png');
+    const eos = require('./icones/eos.png');
+    const qtum = require('./icones/qtum.png');
+    const omg = require('./icones/omg.png');
+    const neo = require('./icones/neo.png');
+    const xem = require('./icones/xem.png');
+    const zec = require('./icones/zec.png');
+    const ppt = require('./icones/ppt.png');
+    const waves = require('./icones/waves.png');
+    const mona = require('./icones/mona.png');
