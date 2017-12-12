@@ -6,7 +6,8 @@ import {
   Text,
   StyleSheet,
   StatusBar,
-  BackHandler
+  BackHandler,
+  Button
 } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import Rodape from '../Rodape/rodape';
@@ -49,7 +50,7 @@ export default class MainScreen extends Component<{}> {
           <View style={styles.IconsView}>
             <TouchableOpacity onPress={() => Actions.sobrebitcoin()}>
               <Image source={bitcoin} style={styles.Icons} />
-              <Text style={styles.TextIcons}>Sobre Bitcoin</Text>
+              <Text style={styles.TextIcons}>Tira Dúvidas</Text>
             </TouchableOpacity>
               <TouchableOpacity onPress={() => Actions.quemsomos()}>
                 <Image source={about} style={styles.Icons} />
@@ -57,14 +58,14 @@ export default class MainScreen extends Component<{}> {
               </TouchableOpacity>
             </View>
         </View>
+        <View style={{ width: 75, marginBottom: 22, alignSelf: 'center' }}>
+          <Button
+          title='Sair'
+          onPress={() => exit()}
 
-        <TouchableOpacity
-        style={{ width: 70, alignSelf: 'center', height: 35, marginBottom: 15 }} 
-        onPress={() => exit()}
-        >
-          <Text style={styles.Sair}>Sair</Text>
-        </TouchableOpacity>
-
+          color='orange'
+          />
+        </View>
         <Rodape corFundo={corPrimaria} />
       </View>
     );
