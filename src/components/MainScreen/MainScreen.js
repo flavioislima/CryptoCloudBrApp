@@ -57,6 +57,14 @@ export default class MainScreen extends Component<{}> {
               </TouchableOpacity>
             </View>
         </View>
+
+        <TouchableOpacity
+        style={{ width: 70, alignSelf: 'center', height: 35, marginBottom: 15 }} 
+        onPress={() => exit()}
+        >
+          <Text style={styles.Sair}>Sair</Text>
+        </TouchableOpacity>
+
         <Rodape corFundo={corPrimaria} />
       </View>
     );
@@ -74,7 +82,7 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       backgroundColor: 'white'
     },
-    AllIcons: { 
+    AllIcons: {
       flex: 3,
       alignItems: 'center',
       justifyContent: 'center'
@@ -104,5 +112,16 @@ const styles = StyleSheet.create({
       color: '#3a4347',
       fontWeight: 'bold',
       alignSelf: 'center'
+    },
+    Sair: {
+      marginBottom: 20,
+      fontSize: 25,
+      color: '#3a4347',
+      fontWeight: 'bold',
+      alignSelf: 'center',
+      textAlign: 'center',
+      //backgroundColor: 'orange',
+      // width: 50,
+      // height: 35
     },
   });
