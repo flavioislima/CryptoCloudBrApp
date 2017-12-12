@@ -7,15 +7,6 @@ import Servicos from './src/components/Servicos/Servicos';
 import QuemSomos from './src/components/QuemSomos/QuemSomos';
 import Cotacoes from './src/components/Cotacoes/Cotacoes';
 
-const Sair = () => {
-  Alert.alert('back');
-  // BackHandler.addEventListener('hardwareBackPress', () => {
-  //     if (Actions.currentScene === Actions.MainScreen) {
-  //     }
-  //   }
-  // );
-};
-
 class CryptoCloudBR extends Component<{}> {
   render() {
       return (
@@ -25,7 +16,6 @@ class CryptoCloudBR extends Component<{}> {
             key='main' component={MainScreen} title="CryptoCloudBrasil"
             titleStyle={{ alignSelf: 'center', color: 'white' }}
             headerStyle={{ backgroundColor: 'orange', height: 35 }}
-            onBack={() => Sair()}
             hideNavBar
             />
             <Scene
@@ -47,7 +37,7 @@ class CryptoCloudBR extends Component<{}> {
             key='quemsomos' component={QuemSomos} title="Quem Somos"
             titleStyle={{ paddingLeft: 58, color: 'orange' }}
             headerStyle={{ backgroundColor: 'white', height: 35 }} hideNavBar
-            
+
             />
           </Stack>
         </Router>
