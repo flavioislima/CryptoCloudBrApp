@@ -11,7 +11,7 @@ import Rodape from '../Rodape/rodape';
 
 export default class QuemSomos extends Component<{}> {
   render() {
-    const corPrimaria = '#837A7F';
+    const corPrimaria = '#d4991c';
     return (
       <View style={styles.MainView}>
         <Cabecalho descricao="Sobre a Bitcoin" corFundo={corPrimaria} />
