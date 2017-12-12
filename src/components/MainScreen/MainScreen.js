@@ -34,6 +34,7 @@ export default class MainScreen extends Component<{}> {
             <Image source={logo} style={styles.LogoIcon} />
           </View>
 
+        <View style={styles.AllIcons} >
           <View style={styles.IconsView}>
             <TouchableOpacity onPress={() => Actions.servicos()}>
               <Image source={services} style={styles.Icons} />
@@ -46,17 +47,18 @@ export default class MainScreen extends Component<{}> {
             </View>
 
           <View style={styles.IconsView}>
-          <TouchableOpacity onPress={() => Actions.sobrebitcoin()}>
-            <Image source={bitcoin} style={styles.Icons} />
-            <Text style={styles.TextIcons}>Sobre Bitcoin</Text>
-          </TouchableOpacity>
-            <TouchableOpacity onPress={() => Actions.quemsomos()}>
-              <Image source={about} style={styles.Icons} />
-              <Text style={styles.TextIcons}>Quem Somos</Text>
+            <TouchableOpacity onPress={() => Actions.sobrebitcoin()}>
+              <Image source={bitcoin} style={styles.Icons} />
+              <Text style={styles.TextIcons}>Sobre Bitcoin</Text>
             </TouchableOpacity>
-          </View>
-          <Rodape corFundo={corPrimaria} />
+              <TouchableOpacity onPress={() => Actions.quemsomos()}>
+                <Image source={about} style={styles.Icons} />
+                <Text style={styles.TextIcons}>Quem Somos</Text>
+              </TouchableOpacity>
+            </View>
         </View>
+        <Rodape corFundo={corPrimaria} />
+      </View>
     );
   }
 }
@@ -67,25 +69,22 @@ const styles = StyleSheet.create({
       backgroundColor: 'white'
     },
     LogoView: {
-      flex: 3,
+      flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
       backgroundColor: 'white'
     },
-    IconsView: {
+    AllIcons: { 
       flex: 3,
+      alignItems: 'center',
+      justifyContent: 'center'
+    },
+    IconsView: {
+    //  flex: 2,
       justifyContent: 'center',
       alignItems: 'center',
       flexDirection: 'row',
       backgroundColor: 'white',
-    },
-    BottomView: {
-      flex: 0.5,
-      alignItems: 'center',
-      justifyContent: 'center',
-      backgroundColor: 'orange',
-      borderWidth: 0.25,
-      borderColor: 'gray'
     },
     LogoIcon: {
       width: 300,
@@ -93,21 +92,17 @@ const styles = StyleSheet.create({
       //marginBottom: 5,
     },
     Icons: {
-      width: 100,
-      height: 100,
+      width: 110,
+      height: 110,
       marginRight: 25,
       marginLeft: 25,
-      marginBottom: 10,
+      marginBottom: 5,
     },
     TextIcons: {
+      marginBottom: 25,
       fontSize: 20,
       color: '#3a4347',
       fontWeight: 'bold',
       alignSelf: 'center'
-    },
-    BottomText: {
-      fontSize: 12,
-      textAlign: 'center',
-      color: 'white'
     },
   });
