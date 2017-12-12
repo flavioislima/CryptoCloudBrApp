@@ -14,7 +14,7 @@ export default class QuemSomos extends Component<{}> {
     const corPrimaria = '#d4991c';
     return (
       <View style={styles.MainView}>
-        <Cabecalho descricao="Sobre a Bitcoin" corFundo={corPrimaria} />
+        <Cabecalho descricao="Tira Dúvidas" corFundo={corPrimaria} />
         <PagerBitcoin />
         <Rodape corFundo={corPrimaria} />
       </View>
