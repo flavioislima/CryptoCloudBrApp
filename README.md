@@ -1,2 +1,0 @@
-# CryptoCloudBrApp
-App for CryptoCloudBrasil
